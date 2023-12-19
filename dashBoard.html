@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-zinc-500 flex p-4 justify-between">
+        <div class="text-white font-bold text-2xl">
+            Welcome to Your DashBoard <span id="username-placeholder"></span>
+        </div>
+        <div class="flex space-x-4">
+            <input type="search" id="search" class="border rounded p-1 outline-none w-72" placeholder="Search..." />
+            <button type="submit" id="logout"
+                class="transition-all ease-linear hover:scale-125 text-white p-1 h-8 rounded-md font-light cursor-pointer">
+                Log-Out
+            </button>
+        </div>
+    </header>
+    <div class="info bg-gray-100 p-2 flex gap-10">
+        <div class="price w-4 h-4 bg-green-400 rounded-full relative"><span class="absolute top-6 text-xs">Price</span>
+        </div>
+        <div class="price w-4 h-4 bg-red-400 rounded-full relative"><span class="absolute top-6 text-xs">Stock</span>
+        </div>
+        <div class="price w-4 h-4 bg-blue-400 rounded-full relative"><span
+                class="absolute top-6 text-xs">Category</span></div>
+    </div>
+    <aside class="bg-gray-100 p-2 flex gap-8 justify-end rounded-md">
+        <div class="filters">
+            <h2 class="text-lg font-light mb-2 ml-2">Filters:</h2>
+            <select id="priceFilter" class="outline-none p-1 rounded-md border-2 border-slate-500">
+                <option value="chrn">All Products Range</option>
+                <option value="oneToFive">1 to 500</option>
+                <option value="fiveToThous">501 to 1000</option>
+                <option value="thousToFift">1001 to 1500</option>
+                <option value="fiftToTwo">1501 to 2000</option>
+            </select>
+        </div>
+
+        <div class="sorting mr-16">
+            <h2 class="text-lg font-light mb-2 ml-2">Sorts:</h2>
+            <select id="sortSelect" class="outline-none p-1 rounded-md border-2 border-slate-500">
+                <option value="none">Sort It Out</option>
+                <option value="lowToHigh">Low to High</option>
+                <option value="highToLow">High to Low</option>
+            </select>
+        </div>
+    </aside>
+    <main class="p-4">
+        <div id="cards" class="grid grid-cols-4 gap-8"></div>
+    </main>
+
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>

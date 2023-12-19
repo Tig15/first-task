@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="login bg-sky-300 h-full flex justify-center items-center">
+    <h2
+        class="p-3 w-96 bg-slate-700 text-3xl text-white text-center font-thin font-serif absolute top-40 left-84 rounded-md">
+        Flight to The Dashboard
+    </h2>
+    <form action="./dashBoard.html" id="login"
+        class="h-64 w-96 flex flex-col gap-4 bg-gray-100 justify-center items-center mt-60 relative rounded-md">
+        <div class="input-group relative">
+            <input type="text" id="username"
+                class="mt-14 p-2 w-72 outline-none border-2 border-slate-700 rounded transition-all hover:scale-110 hover:border-slate-300"
+                placeholder="Username" />
+            <div class="text-red-500 text-xs mt-1 error-message"></div>
+        </div>
+        <div class="input-group relative">
+            <input type="password" id="password"
+                class="mt-5 p-2 w-72 outline-none border-2 border-slate-700 rounded relative transition-all hover:scale-110 hover:border-slate-300"
+                placeholder="Password" />
+            <div class="text-red-500 w-72 text-xs mt-1 error-message"></div>
+        </div>
+        <button type="submit"
+            class="mb-10 p-1 border-2 border-slate-500 rounded-md hover:bg-slate-800 hover:text-white hover:border-none"
+            id="log-btn">
+            Log-In
+        </button>
+    </form>
+    <script src="./logScript.js"></script>
+</body>
+
+</html>
